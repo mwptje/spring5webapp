@@ -18,7 +18,7 @@ public class BookController {
     public String getBooks(Model model) {
         // fill the model to pass to the view template
         model.addAttribute("books", bookRepository.findAll());
-
-        return "books"; // name of the template if using Thymeleaf
+        // created a directory resources/templates/books and added a list.html
+        return "books/list"; // name of the template if using Thymeleaf
     }
 }
